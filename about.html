@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - MelodyHub</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-music me-2"></i>MelodyHub
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">
+                            <i class="fas fa-home me-1"></i>Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="discover.html">
+                            <i class="fas fa-search me-1"></i>Discover
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">
+                            <i class="fas fa-info-circle me-1"></i>About
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="page-content" style="margin-top: 76px; padding-top: 2rem;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center mb-5">
+                    <h1>About MelodyHub</h1>
+                    <p class="lead">Your gateway to the world of music discovery and exploration.</p>
+                </div>
+            </div>
+
+            <div class="row mb-5">
+                <div class="col-lg-6">
+                    <div class="music-card">
+                        <h3>Our Mission</h3>
+                        <p>At MelodyHub, we believe music has the power to connect people across cultures and boundaries. Our mission is to help music lovers discover new artists, explore different genres, and find their next favorite song.</p>
+                        <p>We leverage cutting-edge technology and comprehensive music databases to bring you the most accurate and up-to-date information about artists, albums, and tracks from around the world.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="music-card">
+                        <h3>What We Offer</h3>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Artist Search & Discovery</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Detailed Artist Information</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Real-time Music Data</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>User-Friendly Interface</li>
+                            <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Mobile-Responsive Design</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-center mb-4">Contact Us</h2>
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8">
+                            <div class="music-card">
+                                <form id="contact-form">
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="name" class="form-label">Name</label>
+                                            <input type="text" class="form-control form-control-custom" id="name" required>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="email" class="form-label">Email</label>
+                                            <input type="email" class="form-control form-control-custom" id="email" required>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="subject" class="form-label">Subject</label>
+                                        <input type="text" class="form-control form-control-custom" id="subject" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="message" class="form-label">Message</label>
+                                        <textarea class="form-control form-control-custom" id="message" rows="5" required></textarea>
+                                    </div>
+                                    <div class="text-center">
+                                        <button type="submit" class="btn btn-custom">
+                                            <i class="fas fa-paper-plane me-2"></i>Send Message
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Initialize contact form for about page
+        document.addEventListener('DOMContentLoaded', function() {
+            const contactForm = new ContactForm();
+            contactForm.initializeForm();
+        });
+    </script>
+</body>
+</html>

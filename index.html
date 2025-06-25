@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MelodyHub - Discover Music</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="fas fa-music me-2"></i>MelodyHub
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">
+                            <i class="fas fa-home me-1"></i>Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="discover.html">
+                            <i class="fas fa-search me-1"></i>Discover
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">
+                            <i class="fas fa-info-circle me-1"></i>About
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="page-content" style="margin-top: 76px;">
+        <div class="hero-section">
+            <div class="container">
+                <h1 class="hero-title">Welcome to MelodyHub</h1>
+                <p class="hero-subtitle">Discover new music, explore artists, and find your next favorite song</p>
+                <a href="discover.html" class="btn btn-custom">
+                    Start Exploring <i class="fas fa-arrow-right ms-2"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="music-card text-center">
+                        <i class="fas fa-headphones feature-icon mb-3"></i>
+                        <h4>High-Quality Audio</h4>
+                        <p>Experience crystal-clear sound quality with our premium audio streaming technology.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="music-card text-center">
+                        <i class="fas fa-users feature-icon mb-3"></i>
+                        <h4>Discover Artists</h4>
+                        <p>Find new and upcoming artists from around the world with our powerful search engine.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="music-card text-center">
+                        <i class="fas fa-heart feature-icon mb-3"></i>
+                        <h4>Personal Favorites</h4>
+                        <p>Create your own collection of favorite tracks and build the perfect playlist.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-12">
+                    <h2 class="text-center mb-4">Featured Artists</h2>
+                    <div id="featured-artists" class="row">
+                        <!-- Featured artists will be loaded here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        // Initialize featured content for home page
+        document.addEventListener('DOMContentLoaded', function() {
+            const featuredContent = new FeaturedContent();
+            featuredContent.loadFeaturedArtists();
+        });
+    </script>
+</body>
+</html>
